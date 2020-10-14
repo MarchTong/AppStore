@@ -12,7 +12,7 @@
         "noEmit": true,
         "strict": true,
         "target": "esnext",
-        "baseUrl": ".src",
+        "baseUrl": ".",
         "paths": {
             "@reducers": [
                 "./src/reducers/index"
@@ -55,6 +55,9 @@
             ],
             "@components/AppList/index": [
                 "./src/components/AppList/index"
+            ],
+            "@store": [
+                "./src/configs/store"
             ]
         }
     },
