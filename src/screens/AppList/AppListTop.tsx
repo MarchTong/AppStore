@@ -12,7 +12,7 @@ const SEARCH_PLACE_HOLDER = "Search"
 
 const AppListTop = () => {
     const { iTunesReducer } = useSelector<ReducerType, ReducerType>(state => state)
-    const { topFreeApplications: { isTopFreeFetching } } = iTunesReducer
+    const { isTopFreeFetching } = iTunesReducer
     const topGrossingItems = iTunesReducer.topGrossingApplications.items
     const topFreeItems = iTunesReducer.topFreeApplications.items
     const [searchValue, setSearchValue] = useState("")

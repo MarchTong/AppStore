@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from "react-native"
 import IconSelector from "@components/Icon/IconSelector"
 import styles from "./styles"
 
-const TabIcon = (props) => {
+const TabIcon = (props: any) => {
     const { style, text, textStyle, iconSet, iconName, iconStyle, onPress } = props
     let containerStyles = [styles.container]
     if (style !== null) {

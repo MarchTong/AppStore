@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from 'prop-types';
 import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Feather from 'react-native-vector-icons/Feather';
@@ -12,7 +11,7 @@ import Octicons from 'react-native-vector-icons/Octicons';
 import Zocial from 'react-native-vector-icons/Zocial';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 
-const IconSelector = (props) => {
+const IconSelector = (props: any) => {
     const { set, name, style } = props;
 
     switch (set) {

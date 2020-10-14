@@ -6,10 +6,10 @@ import styles from "./styles"
 
 const RECOMMENDATION_TITLE = "Recommendation"
 
-const HorizontalAppList = (props) => {
+const HorizontalAppList = (props: any) => {
     const { topGrossingItems } = props
 
-    function extractTopItems(itemArr, limit) {
+    function extractTopItems(itemArr: Array<any>, limit: number) {
         const arr = [...itemArr]
         if (arr) {
             return arr.slice(0, limit)

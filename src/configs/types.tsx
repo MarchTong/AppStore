@@ -17,7 +17,8 @@ export type iTunesState = {
     isTopFreeFetching: boolean,
     isTopGrossingFetching: boolean,
     search: object,
-    topFreeApplications: Array<object>,
+    topFreeApplications: TopFreeApplicationsType,
+    topGrossingApplications: TopGrossingApplicationsType,
     iTunesInfo: object
 }
 
@@ -48,4 +49,24 @@ export type iTunesFetchTopGrossingApplicationsSuccessPayload = {
 export type iTunesFetchTopApplicationsPayload = {
     topFreeLimit: number,
     topGrossingLimit: number
+}
+
+export type TopFreeApplicationsType = {
+    items: Array<any>;
+    iTunesInfo: {
+        appleIcon: string;
+        appleRights: string;
+        iTunesTitle: string;
+        lastUpdated: string;
+    };
+}
+
+export type TopGrossingApplicationsType = {
+    items: Array<any>;
+    iTunesInfo: {
+        appleIcon: string;
+        appleRights: string;
+        iTunesTitle: string;
+        lastUpdated: string;
+    };
 }

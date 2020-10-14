@@ -1,4 +1,4 @@
-import type { ActionType, iTunesState } from "@types"
+import type { ActionType, iTunesState, TopGrossingApplicationsType, TopFreeApplicationsType } from "@types"
 import { iTunesInitialState } from "./InitialStates"
 import actionTypes from "@constants"
 
@@ -22,9 +22,9 @@ export default function iTunesReducer(state: iTunesState = initialState, action:
                 const { entry, appleIcon, appleRights, iTunesTitle, lastUpdated } = payload
                 nextState = {
                     ...nextState,
+                    isTopFreeFetching: false,
                     topFreeApplications: {
                         items: entry,
-                        isTopFreeFetching: false,
                         iTunesInfo: { appleIcon, appleRights, iTunesTitle, lastUpdated }
                     }
                 }
@@ -47,9 +47,9 @@ export default function iTunesReducer(state: iTunesState = initialState, action:
                 const { entry, appleIcon, appleRights, iTunesTitle, lastUpdated } = payload
                 nextState = {
                     ...nextState,
+                    isTopGrossingFetching: false,
                     topGrossingApplications: {
                         items: entry,
-                        isTopGrossingFetching: false,
                         iTunesInfo: { appleIcon, appleRights, iTunesTitle, lastUpdated }
                     }
                 }

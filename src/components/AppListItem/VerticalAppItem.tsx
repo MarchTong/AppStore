@@ -1,10 +1,10 @@
 import React from "react"
 import { TouchableHighlight, Image, Text } from "react-native"
+import { Row, Column as Col } from "react-native-responsive-grid"
 import styles from "./styles"
 
-const VerticalAppItem = (props) => {
+const VerticalAppItem = (props: any) => {
     const { topFreeItem } = props
-    console.log(topFreeItem)
 
     return (
         <TouchableHighlight>

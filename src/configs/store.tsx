@@ -1,4 +1,4 @@
-import { createStore, compose, applyMiddleware } from "redux"
+import { createStore, compose, applyMiddleware, CombinedState } from "redux"
 import AsyncStorage from "@react-native-community/async-storage"
 import { persistStore, persistReducer } from "redux-persist"
 import hardSet from "redux-persist/lib/stateReconciler/hardSet"
@@ -14,7 +14,7 @@ const persistConfig = {
     stateReconciler: hardSet,
     debug: true
 }
-const persistedReducer = persistReducer(persistConfig, reducers)
+const persistedReducer = persistReducer<any, any>(persistConfig, reducers)
 const store = createStore(persistedReducer, compose(applyMiddleware(...middlewares)))
 const persistor = persistStore(store)
 sagaMiddleware.run(rootSaga)

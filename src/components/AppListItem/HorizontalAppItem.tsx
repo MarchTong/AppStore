@@ -5,14 +5,14 @@ import styles from "./styles"
 
 const MAX_NAME_LENGTH = 10
 
-const HorizontalAppItem = (props) => {
+const HorizontalAppItem = (props: any) => {
     const { item } = props
     const name = item["im:name"]["label"]
     const category = item["category"]["attributes"]["label"]
     const image = item["im:image"][2]["label"]
     const imageSize = parseInt(item["im:image"][2]["attributes"]["height"])
 
-    function renderMaxApplicationName(name) {
+    function renderMaxApplicationName(name: string) {
         return name.length > MAX_NAME_LENGTH ? `${name.substr(0, MAX_NAME_LENGTH - 1)}...` : name
     }
 

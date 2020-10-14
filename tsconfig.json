@@ -58,6 +58,9 @@
             ],
             "@store": [
                 "./src/configs/store"
+            ],
+            "@components/Icon/IconSelector": [
+                "./src/components/Icon/IconSelector"
             ]
         }
     },
