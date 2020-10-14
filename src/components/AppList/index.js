@@ -1,5 +1,4 @@
-import VerticalAppItemCircle from "./VerticalAppItemCircle"
-import VerticalAppItemRound from "./VerticalAppItemRound"
-import HorizontalAppItem from "./HorizontalAppItem"
+import HorizontalAppList from "./HorizontalAppList"
+import VerticalAppList from "./VerticalAppList"
 
-export { VerticalAppItemCircle, VerticalAppItemRound, HorizontalAppItem }
+export { HorizontalAppList, VerticalAppList }

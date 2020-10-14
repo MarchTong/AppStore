@@ -22,9 +22,11 @@ export default function iTunesReducer(state: iTunesState = initialState, action:
                 const { entry, appleIcon, appleRights, iTunesTitle, lastUpdated } = payload
                 nextState = {
                     ...nextState,
-                    isTopFreeFetching: false,
-                    topFreeApplications: entry,
-                    iTunesInfo: { appleIcon, appleRights, iTunesTitle, lastUpdated }
+                    topFreeApplications: {
+                        items: entry,
+                        isTopFreeFetching: false,
+                        iTunesInfo: { appleIcon, appleRights, iTunesTitle, lastUpdated }
+                    }
                 }
             }
             return nextState
@@ -39,6 +41,22 @@ export default function iTunesReducer(state: iTunesState = initialState, action:
                 const { limit } = payload
                 nextState = { ...nextState, isTopGrossingFetching: true, search: { ...nextState.search, topGrossingLimit: limit } }
             }
+            return nextState
+        case actionTypes.ITUNES_FETCH_TOP_GROSSING_APPLICATIONS_SUCCESS:
+            if (payload) {
+                const { entry, appleIcon, appleRights, iTunesTitle, lastUpdated } = payload
+                nextState = {
+                    ...nextState,
+                    topGrossingApplications: {
+                        items: entry,
+                        isTopGrossingFetching: false,
+                        iTunesInfo: { appleIcon, appleRights, iTunesTitle, lastUpdated }
+                    }
+                }
+            }
+            return nextState
+        case actionTypes.ITUNES_FETCH_TOP_GROSSING_APPLICATIONS_FAILURE:
+            nextState = { ...nextState, isTopGrossingFetching: false }
             return nextState
         /* Fetch top grossing applications */
 

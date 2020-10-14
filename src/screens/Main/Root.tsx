@@ -58,7 +58,7 @@ const Root = () => {
     useEffect(() => {
         const payload: iTunesFetchTopApplicationsPayload = {
             topFreeLimit: 100,
-            topGrossingLimit: 10
+            topGrossingLimit: 100
         }
         dispatch(iTunesFetchTopApplications(payload))
     }, [dispatch])

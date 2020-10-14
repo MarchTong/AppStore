@@ -49,6 +49,12 @@
             ],
             "@styleConstants": [
                 "./src/configs/styleConstants"
+            ],
+            "@components/AppListItem/index": [
+                "./src/components/AppListItem/index"
+            ],
+            "@components/AppList/index": [
+                "./src/components/AppList/index"
             ]
         }
     },

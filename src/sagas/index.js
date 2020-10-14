@@ -7,7 +7,7 @@ const rootSaga = function* rootSaga() {
     yield takeLatest(actionTypes.ITUNES_FETCH_TOP_GROSSING_APPLICATIONS, iTunesFetchTopGrossingApplicationsFlow)
     yield all([
         takeLatest(actionTypes.ITUNES_FETCH_TOP_APPLICATIONS, iTunesFetchTopFreeApplicationsFlow),
-        takeLatest(actionTypes.ITUNES_FETCH_TOP_GROSSING_APPLICATIONS, iTunesFetchTopGrossingApplicationsFlow)
+        takeLatest(actionTypes.ITUNES_FETCH_TOP_APPLICATIONS, iTunesFetchTopGrossingApplicationsFlow)
     ])
 }
 

@@ -1,6 +1,11 @@
 export const DARK_MODE_BACKGROUND_COLOR = `#141414`
 export const LIGHT_MODE_BACKGROUND_COLOR = `#efece3`
+
 export const TAR_BAR_ICON_FONT_SIZE = 25
 export const TAB_BAR_TITLE_FONT_SIZE = 14
 export const TAB_BAR_TEXT_COLOR_ACTIVE = "#2c528c"
 export const TAB_BAR_TEXT_COLOR_INACTIVE = "#404040"
+
+export const HORIZONTAL_APP_LIST_TITLE_FONT_SIZE = 25
+export const HORIZONTAL_ITEM_FONT_SIZE = 14
+export const HORIZONTAL_ITEM_FONT_COLOR = "white"
