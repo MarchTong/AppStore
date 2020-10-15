@@ -14,16 +14,19 @@ export type Route = {
 }
 
 export type iTunesState = {
+    isInitFetching: boolean,
     isTopFreeFetching: boolean,
     isTopGrossingFetching: boolean,
-    search: object,
+    search: iTunesStateSearchType,
     topFreeApplications: TopFreeApplicationsType,
     topGrossingApplications: TopGrossingApplicationsType,
-    iTunesInfo: object
+    iTunesInfo: typeiTunesInfoType,
+    isTopGrossingFetchFailure: boolean,
+    isTopFreeFetchFailure: boolean
 }
 
 export type iTunesFetchTopFreeApplicationsPayload = {
-    limit: number
+    limit: number,
 }
 
 export type iTunesFetchTopFreeApplicationsSuccessPayload = {
@@ -53,20 +56,23 @@ export type iTunesFetchTopApplicationsPayload = {
 
 export type TopFreeApplicationsType = {
     items: Array<any>;
-    iTunesInfo: {
-        appleIcon: string;
-        appleRights: string;
-        iTunesTitle: string;
-        lastUpdated: string;
-    };
+    iTunesInfo: typeiTunesInfoType
 }
 
 export type TopGrossingApplicationsType = {
     items: Array<any>;
-    iTunesInfo: {
-        appleIcon: string;
-        appleRights: string;
-        iTunesTitle: string;
-        lastUpdated: string;
-    };
+    iTunesInfo: typeiTunesInfoType
+}
+
+export type iTunesStateSearchType = {
+    currentPage: number,
+    topFreeLimit: number,
+    topGrossingLimit: number,
+}
+
+export type typeiTunesInfoType = {
+    appleIcon: string;
+    appleRights: string;
+    iTunesTitle: string;
+    lastUpdated: string;
 }

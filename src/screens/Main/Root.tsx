@@ -16,7 +16,7 @@ const Root = () => {
     const [tabIndex, setTabIndex] = useState(0)
     const [tabRoutes] = useState([
         { key: "appListTop", title: "Top 100", icon: "thumbs-up" },
-        { key: "appListRecom", title: "Recommendation", icon: "trending-up" }
+        // { key: "appListRecom", title: "Recommendation", icon: "trending-up" }
     ])
     const [tabState, setTabState] = useState<State>({ index: tabIndex, routes: tabRoutes })
 
@@ -52,13 +52,14 @@ const Root = () => {
 
     const renderScene = SceneMap({
         appListTop: AppListTop,
-        appListRecom: AppListRecom
+        // appListRecom: AppListRecom
     })
 
     useEffect(() => {
+        // init fetch both top free & top grossing applications
         const payload: iTunesFetchTopApplicationsPayload = {
-            topFreeLimit: 100,
-            topGrossingLimit: 100
+            topFreeLimit: 10,
+            topGrossingLimit: 10
         }
         dispatch(iTunesFetchTopApplications(payload))
     }, [dispatch])
