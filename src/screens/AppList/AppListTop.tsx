@@ -9,10 +9,10 @@ import { BackToTopButton } from "@components/AppListItem/index"
 import { SearchBar } from "react-native-elements"
 import { Row, Column as Col } from "react-native-responsive-grid"
 import styles from "./styles"
-import { IconSelector } from "src/components/Icon"
 
 const SEARCH_PLACE_HOLDER = "Search"
 const POOR_NETWORK_CONNECTION = "Poor network connection"
+const PULL_TO_REFRESH = "Pull to refresh"
 const PAGE_PER_RECORDS = 10
 
 const AppListTop = () => {
@@ -112,6 +112,7 @@ const AppListTop = () => {
                                 size={"large"}
                                 color={TAB_BAR_TEXT_COLOR_ACTIVE}
                             />
+                            <Text style={styles.fetchFailureText}>{PULL_TO_REFRESH}</Text>
                             <Text style={styles.fetchFailureText}>{POOR_NETWORK_CONNECTION}</Text>
                         </View> :
                         isInitFetching ?
