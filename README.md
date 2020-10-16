@@ -18,7 +18,7 @@ npx react-native link
 ```
 
 
-## Run
+## Run (Android only)
 To run the application
 ```bash
 npm run android
