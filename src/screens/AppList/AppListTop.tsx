@@ -55,7 +55,6 @@ const AppListTop = () => {
         if (search) {
             // filtering by searchbar value
             topGrossingItems.map(item => {
-                console.log(item.title.label, value)
                 if (item.title.label.toLowerCase().includes(value.toLowerCase())) {
                     tempTopGrossingItems.push(item)
                 }
