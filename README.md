@@ -18,5 +18,5 @@ To run the application
 npm run android
 ```
 
-## IF THE PROGRAMMING CANNOT BE EXECUTED
+## If the program cannot be executed
 The installer (.apk) was provided in installer FOLDER 
