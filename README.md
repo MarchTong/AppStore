@@ -17,3 +17,6 @@ To run the application
 ```bash
 npm run android
 ```
+
+## IF THE PROGRAMMING CANNOT BE EXECUTED
+The installer (.apk) was provided in installer FOLDER 
