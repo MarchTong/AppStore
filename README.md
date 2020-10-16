@@ -1,5 +1,8 @@
 # AppStore
 
+## Please make sure you installed Node & React Native CLI
+https://reactnative.dev/docs/0.60/getting-started
+
 ## Install
 Please use npm to install node_modules
 ```bash
