@@ -152,9 +152,9 @@ android {
         }
         release {
             storeFile file('my-release-key.keystore')
-            storePassword 'hk01test'
+            storePassword ''
             keyAlias 'your_key_alias'
-            keyPassword 'hk01test'
+            keyPassword ''
         }
     }
     buildTypes {
